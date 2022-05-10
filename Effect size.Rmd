@@ -1,0 +1,83 @@
+---
+title: "Stats_Research"
+author: "1740221_31_65"
+date: "28/08/2019"
+output: word_document
+---
+
+```{r setup}
+knitr::opts_chunk$set()
+```
+
+### Hypothesis: 
+
+The 
+
+effect size :+-0.2,0.5,0.8
+population standard deviation:
+significance level: 5% and 1%
+power: 0.8 and 0.9
+standardised effect size = 0.5,1.0,1.5
+sample size : 200
+
+
+```{r cars}
+library(pwr)
+pwr.t.test(d=0.2, sig.level=.05, power = .90, type = 'two.sample')
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+pwr.t.test(d=0.5, sig.level=.05, power = .90, type = 'two.sample')
+```
+
+
+```{r pressure}
+pwr.t.test(d=0.8, sig.level=.05, power = .90, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.2, sig.level=.05, power = .80, type = 'two.sample')
+```
+
+
+```{r}
+pwr.t.test(d=0.5, sig.level=.05, power = .80, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.8, sig.level=.05, power = .80, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.2, sig.level=.01, power = .80, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.5, sig.level=.01, power = .80, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.8, sig.level=.01, power = .80, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.2, sig.level=.01, power = .90, type = 'two.sample')
+```
+
+
+```{r}
+pwr.t.test(d=0.5,sig.level=.01, power = .90, type = 'two.sample')
+```
+```{r}
+pwr.t.test(d=0.8, sig.level=.01, power = .90, type = 'two.sample')
+```
+Actually used : 10 per group
+Minimum calculated :
+26 per group for effect size 0.8, significance level 0.05, poer 0.8
+```{r}
+library(readxl)
+ data3 <- read_excel("C:/Users/Snigdha/Desktop/Stats Research/12302_2014_14_MOESM3_ESM.xlsx",    skip = 1)
+```
+
+
+```{r}
+class(data3)
+```
